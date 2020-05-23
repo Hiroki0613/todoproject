@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form aciton="" method="POST">
+    <!-- csrf_tokenはセキュリティー上のお約束のようなもの -->
+    {% csrf_token %}
+    <!-- このコードを書くことで、フォームが作成される -->
+    <!-- form.as_pのas_pによって、項目が縦にきれいに並んでいる -->
+    {{ form.as_p }}
+    <input type="submit" value="作成する">
+</form>
+{% endblock content %}
